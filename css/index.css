@@ -1,0 +1,29 @@
+/* General styles */
+
+@font-face {
+  font-family: 'COCOGOOSE Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('COCOGOOSE Regular'), url('fonts/cocogoose_trial.woff') format('woff');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0%;
+  padding: 0%;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+/* Mobile Styles */
+
+
+
+/* Desktops Styles */
