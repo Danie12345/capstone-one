@@ -21,6 +21,7 @@ ul,
 li {
   list-style: none;
   padding: 0%;
+  margin: 0%;
 }
 
 /* Mobile Styles */
@@ -33,7 +34,6 @@ li {
   padding: 0% 5vw;
   padding-top: 1vh;
   height: 80%;
-  min-height: fit-content;
   display: flex;
   flex-direction: column;
 }
@@ -54,7 +54,7 @@ header {
 }
 
 .pre-title {
-  background-clip: text;
+  background-clip: unset;
   -webkit-background-clip: text;
   color: transparent;
   background-image: linear-gradient(to right, rgb(255, 53, 2), rgb(255, 81, 0));
@@ -64,7 +64,7 @@ header {
 }
 
 .title {
-  background-clip: text;
+  background-clip: unset;
   -webkit-background-clip: text;
   color: transparent;
   background-image: url('../assets/images/title-background.jpg');
@@ -104,6 +104,75 @@ header {
 #programs {
   background-color: rgb(39, 42, 49);
   background-image: url('../assets/images/pattern_bg.png');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 35px;
+}
+
+#programs > h2 {
+  color: white;
+  font-size: 18px;
+  font-family: Lato, sans-serif;
+  font-weight: 100;
+}
+
+.hr {
+  background-color: #ec5242;
+  opacity: 0.7;
+  margin: 5px 0% 20px 0%;
+  height: 1px;
+  width: 32px;
+}
+
+#programs-list {
+  width: 90%;
+}
+
+.program-item {
+  width: 100%;
+  margin: 8px auto;
+  height: 100%;
+  color: white;
+  display: flex;
+  padding: 16px 0%;
+  vertical-align: middle;
+  align-items: center;
+  background-color: rgb(211, 211, 211, 0.1);
+}
+
+.program-item > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0% 12px;
+  width: 20%;
+}
+
+.program-item > h3 {
+  color: #ec5242;
+  font-size: 15px;
+  margin: 0%;
+  height: 100%;
+  width: 25%;
+}
+
+.program-item > span {
+  font-size: 11px;
+  width: 53%;
+  margin-right: 2%;
+}
+
+#join-summit {
+  font-family: 'COCOGOOSE Regular', sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  color: white;
+  background-color: #ec5242;
+  width: 262px;
+  height: 60px;
+  border: none;
+  margin: 20px 0%;
 }
 
 /* Desktops Styles */
