@@ -3,6 +3,7 @@ import { speakers, speakerTemplate } from './speakers.js';
 const speakersList = document.querySelector('#speakers-list');
 const moreSpeakers = document.querySelector('#all-speakers');
 let moreSpeakersToggle = false;
+const burger = document.querySelector('#hamburger');
 
 function showSpeakers(allowSpeakers) {
   let i = 0;
@@ -15,6 +16,10 @@ function showSpeakers(allowSpeakers) {
     return true;
   });
 }
+
+burger.addEventListener('click', () => {
+  document.querySelector('.nav-options').classList.toggle('active');
+});
 
 moreSpeakers.addEventListener('click', () => {
   speakersList.innerHTML = '';

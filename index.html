@@ -12,8 +12,23 @@
   <body>
     <main id="main" class="container-fullwidth">
       <header>
-        <nav id="nav" class="navbar">
-          <img src="assets/icons/mobile-menu.png" alt="Menu hamburger button" id="hamburger" class="nav-item">
+        <nav id="nav" class="container-fullwidth navbar">
+          <div class="desktop-visible">
+            <img src="#" alt="Facebook logo">
+            <img src="#" alt="Twitter logo">
+            <button type="button">Logout</button>
+            <button type="button">Mypage</button>
+            <button type="button">English</button>
+          </div>
+          <img src="assets/icons/mobile-menu.png" alt="Menu hamburger button" id="hamburger" class="nav-item mobile-visible">
+          <div class="nav-options row-fullwidth mobile-visible">
+            <a class="nav-option" href="#">About</a>
+            <a class="nav-option" href="#">Program</a>
+            <a class="nav-option" href="#">Join</a>
+            <a class="nav-option" href="#">Sponsor</a>
+            <a class="nav-option" href="#">News</a>
+            <a class="nav-option" href="#">CC Campaign</a>
+          </div>
         </nav>
       </header>
       <section id="event-intro" class="container-fullwidth">
