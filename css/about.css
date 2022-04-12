@@ -222,7 +222,7 @@ header {
 
 #sponsors {
   width: 100%;
-  height: 120px;
+  height: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -241,6 +241,30 @@ header {
   max-width: 100%;
   height: auto;
   filter: grayscale(1);
+}
+
+.rights {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgb(86, 86, 86);
+  width: 100%;
+  height: auto;
+  display: inline-flex;
+  align-self: center;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.rights > * {
+  width: 45%;
+  text-align: center;
+}
+
+.invert {
+  filter: invert(1);
+  width: 45%;
+  height: 100%;
 }
 
 .active {
