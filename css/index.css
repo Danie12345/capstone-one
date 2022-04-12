@@ -138,7 +138,7 @@ header {
   padding: 16px 0%;
   vertical-align: middle;
   align-items: center;
-  background-color: rgb(211, 211, 211, 0.1);
+  background-color: rgb(211, 211, 211, .1);
 }
 
 .program-item > img {
@@ -173,6 +173,106 @@ header {
   height: 60px;
   border: none;
   margin: 20px 0%;
+}
+
+#speakers {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 16px;
+}
+
+#speakers > h2 {
+  font-size: 18px;
+  letter-spacing: normal;
+}
+
+#speakers > hr {
+  margin: 0%;
+}
+
+#speakers-list {
+  width: 100%;
+  height: auto;
+}
+
+.speaker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 20px 0%;
+}
+
+.speaker > img{
+  width: 100px;
+  height: 100px;
+  align-self: center;
+}
+
+.speaker > div {
+  width: 70%;
+  letter-spacing: 0.37;
+  line-height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.speaker > div > h3 {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0%;
+}
+
+.speaker > div > small {
+  color: #ec5242;
+  font-size: 8px;
+  font-style: italic;
+}
+
+.speaker > div > hr {
+  margin: 6px 0%;
+  width: 8%;
+  background-color: black;
+}
+
+.speaker > div > span {
+  font-size: 8px;
+}
+
+#speakers > button {
+  width: 95%;
+  border: 2px solid rgb(235, 235, 235);
+  background-color: transparent;
+  outline: none;
+  padding: 0%;
+  margin: 8px 0%;
+  margin-bottom: 32px;
+  height: 40px;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+#speakers > button > svg {
+  stroke: #ec5242;
+  stroke-width: 2;
+}
+
+.rotate {
+  -moz-transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+.rotate.pi {
+  -moz-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
 }
 
 /* Desktops Styles */
