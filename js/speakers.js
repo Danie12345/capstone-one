@@ -6,7 +6,7 @@ const speaker = (name, titles, works, photo) => {
 };
 
 export const speakers = {
-  'Scooby': speaker(
+  Scooby: speaker(
     'Scooby',
     'Professor at Harvard Detective School',
     'Scoob has solved countless mysteries along his journey with the gang, even capturing a metaphysical ghost once or twice in his time...',

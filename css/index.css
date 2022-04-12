@@ -138,7 +138,7 @@ header {
   padding: 16px 0%;
   vertical-align: middle;
   align-items: center;
-  background-color: rgb(211, 211, 211, .1);
+  background-color: rgb(211, 211, 211, 0.1);
 }
 
 .program-item > img {
@@ -190,6 +190,12 @@ header {
   letter-spacing: normal;
 }
 
+.speaker > div > hr {
+  margin: 6px 0%;
+  width: 8%;
+  background-color: black;
+}
+
 #speakers > hr {
   margin: 0%;
 }
@@ -206,7 +212,7 @@ header {
   margin: 20px 0%;
 }
 
-.speaker > img{
+.speaker > img {
   width: 100px;
   height: 100px;
   align-self: center;
@@ -214,7 +220,6 @@ header {
 
 .speaker > div {
   width: 70%;
-  letter-spacing: 0.37;
   line-height: 90%;
   display: flex;
   flex-direction: column;
@@ -232,12 +237,6 @@ header {
   color: #ec5242;
   font-size: 8px;
   font-style: italic;
-}
-
-.speaker > div > hr {
-  margin: 6px 0%;
-  width: 8%;
-  background-color: black;
 }
 
 .speaker > div > span {

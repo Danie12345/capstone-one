@@ -20,14 +20,14 @@ moreSpeakers.addEventListener('click', () => {
   speakersList.innerHTML = '';
   if (moreSpeakersToggle) {
     showSpeakers(1);
-    document.querySelector("[class~=btn-more]").innerHTML = 'More';
-    document.querySelector("[class~=rotate]").classList.remove('pi');
-    document.querySelector("[class~=rotate]").setAttribute('viewBox', '-6 -6 32 32');
+    document.querySelector('[class~=btn-more]').innerHTML = 'More';
+    document.querySelector('[class~=rotate]').classList.remove('pi');
+    document.querySelector('[class~=rotate]').setAttribute('viewBox', '-6 -6 32 32');
   } else {
     showSpeakers(Object.keys(speakers).length);
-    document.querySelector("[class~=btn-more]").innerHTML = 'Less';
-    document.querySelector("[class~=rotate]").classList.add('pi');
-    document.querySelector("[class~=rotate]").setAttribute('viewBox', '-6 -10 32 32');
+    document.querySelector('[class~=btn-more]').innerHTML = 'Less';
+    document.querySelector('[class~=rotate]').classList.add('pi');
+    document.querySelector('[class~=rotate]').setAttribute('viewBox', '-6 -10 32 32');
   }
   moreSpeakersToggle = !moreSpeakersToggle;
 });
