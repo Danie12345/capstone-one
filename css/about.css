@@ -146,7 +146,7 @@ header {
 .hr {
   background-color: #ec5242;
   opacity: 0.7;
-  margin: 5px 0% 20px 0%;
+  margin: 0%;
   height: 1px;
   width: 32px;
 }
@@ -168,6 +168,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 32px 0%;
 }
 
 .section > * {
@@ -195,14 +196,51 @@ header {
 }
 
 .section > img {
-  height: 120px;
-  width: auto;
+  height: auto;
+  width: 85%;
 }
 
 .section > .summit-img {
-  height: 180px;
-  width: auto;
+  height: auto;
+  width: 90%;
   margin: 8px 0%;
+}
+
+.section.dark {
+  background-color: rgb(65, 66, 70);
+}
+
+.section.dark > div {
+  width: 100%;
+}
+
+.section.dark > div > h2 {
+  color: rgb(230, 230, 231);
+  font-weight: normal;
+  margin-bottom: 0%;
+}
+
+#sponsors {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#sponsors > li {
+  margin: 0%;
+  width: 27%;
+  display: flex;
+  align-items: center;
+}
+
+.sponsor-img {
+  max-width: 100%;
+  height: auto;
+  filter: grayscale(1);
 }
 
 .active {
