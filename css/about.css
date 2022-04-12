@@ -164,23 +164,23 @@ header {
   border-bottom: 1px solid rgb(86, 86, 86);
 }
 
-#logo {
+.section {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#logo > * {
+.section > * {
   margin: 16px;
 }
 
-#logo-context {
+.section-context {
   width: 69%;
   display: flex;
   flex-direction: column;
 }
 
-#logo-context > * {
+.section-context > * {
   font-family: 'Lato', sans-serif;
   font-size: 20px;
   font-weight: 600;
@@ -189,14 +189,20 @@ header {
   align-self: center;
 }
 
-#logo-context > span {
+.section-context > span {
   font-size: 12px;
   font-weight: normal;
 }
 
-#logo > img {
+.section > img {
   height: 120px;
   width: auto;
+}
+
+.section > .summit-img {
+  height: 180px;
+  width: auto;
+  margin: 8px 0%;
 }
 
 .active {
