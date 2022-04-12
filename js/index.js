@@ -1,9 +1,12 @@
+import partners from './partners.js';
+import license from './license.js';
 import { speakers, speakerTemplate } from './speakers.js';
 
 const speakersList = document.querySelector('#speakers-list');
 const moreSpeakers = document.querySelector('#all-speakers');
 let moreSpeakersToggle = false;
 const burger = document.querySelector('#hamburger');
+let toggleDesktop = false;
 
 function showSpeakers(allowSpeakers) {
   let i = 0;
@@ -38,3 +41,22 @@ moreSpeakers.addEventListener('click', () => {
 });
 
 showSpeakers(1);
+
+Element.prototype.appendAfter = function(element) {
+  element.parentNode.insertBefore(this, element.nextSibling);
+}, false;
+
+function resizeDesktop() {
+  if (window.innerWidth >= 768 && !toggleDesktop) {
+    partners.appendAfter(document.getElementById('speakers'));
+    license.appendAfter(partners);
+    toggleDesktop = !toggleDesktop;
+  } else if (window.innerWidth < 768 && toggleDesktop) {
+    document.querySelector('body').removeChild(partners);
+    document.querySelector('body').removeChild(license);
+    toggleDesktop = !toggleDesktop;
+  }
+}
+
+resizeDesktop();
+window.addEventListener( 'resize', resizeDesktop);

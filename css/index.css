@@ -175,7 +175,7 @@ header {
 
 .hr {
   background-color: #ec5242;
-  opacity: 0.7;
+  opacity: 1;
   margin: 5px 0% 20px 0%;
   height: 1px;
   width: 32px;
@@ -328,6 +328,109 @@ header {
   -moz-transform: rotate(-180deg);
   -webkit-transform: rotate(-180deg);
   transform: rotate(-180deg);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 32px 0%;
+}
+
+.section > * {
+  margin: 16px;
+}
+
+.section-context {
+  width: 69%;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-context > * {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin: 8px 0%;
+  align-self: center;
+}
+
+.section-context > span {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.section > img {
+  height: auto;
+  width: 85%;
+}
+
+.section > .summit-img {
+  height: auto;
+  width: 90%;
+  margin: 8px 0%;
+}
+
+.section.dark {
+  background-color: rgb(65, 66, 70);
+}
+
+.section.dark > div {
+  width: 100%;
+}
+
+.section.dark > div > h2 {
+  color: rgb(230, 230, 231);
+  font-weight: normal;
+  margin-bottom: 0%;
+}
+
+#sponsors {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#sponsors > li {
+  margin: 0%;
+  width: 27%;
+  display: flex;
+  align-items: center;
+}
+
+.sponsor-img {
+  max-width: 100%;
+  height: auto;
+  filter: grayscale(1);
+}
+
+.rights {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgb(86, 86, 86);
+  width: 100%;
+  height: auto;
+  display: inline-flex;
+  align-self: center;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.rights > * {
+  width: 45%;
+  text-align: center;
+}
+
+.invert {
+  filter: invert(1);
+  width: 45%;
+  height: 100%;
 }
 
 .active {
