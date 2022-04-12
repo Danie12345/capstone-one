@@ -166,6 +166,12 @@ header {
   padding-top: 35px;
 }
 
+.section.dark > div > h2 {
+  color: rgb(230, 230, 231);
+  font-weight: normal;
+  margin-bottom: 0%;
+}
+
 #programs > h2 {
   color: white;
   font-size: 18px;
@@ -295,6 +301,11 @@ header {
   font-style: italic;
 }
 
+.section-context > span {
+  font-size: 12px;
+  font-weight: normal;
+}
+
 .speaker > div > span {
   font-size: 8px;
 }
@@ -356,11 +367,6 @@ header {
   align-self: center;
 }
 
-.section-context > span {
-  font-size: 12px;
-  font-weight: normal;
-}
-
 .section > img {
   height: auto;
   width: 85%;
@@ -378,12 +384,6 @@ header {
 
 .section.dark > div {
   width: 100%;
-}
-
-.section.dark > div > h2 {
-  color: rgb(230, 230, 231);
-  font-weight: normal;
-  margin-bottom: 0%;
 }
 
 #sponsors {

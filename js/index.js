@@ -42,10 +42,6 @@ moreSpeakers.addEventListener('click', () => {
 
 showSpeakers(1);
 
-Element.prototype.appendAfter = function(element) {
-  element.parentNode.insertBefore(this, element.nextSibling);
-}, false;
-
 function resizeDesktop() {
   if (window.innerWidth >= 768 && !toggleDesktop) {
     partners.appendAfter(document.getElementById('speakers'));
@@ -59,4 +55,4 @@ function resizeDesktop() {
 }
 
 resizeDesktop();
-window.addEventListener( 'resize', resizeDesktop);
+window.addEventListener('resize', resizeDesktop);

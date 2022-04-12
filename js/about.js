@@ -1,5 +1,3 @@
-import partners from './partners.js';
-
 const burger = document.querySelector('#hamburger');
 
 burger.addEventListener('click', () => {
