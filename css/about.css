@@ -97,10 +97,6 @@
   #path-icon > a {
     display: flex;
     align-items: center;
-    min-width: auto;
-  }
-
-  #path-icon > a {
     color: black;
     margin: 0% 4px;
   }

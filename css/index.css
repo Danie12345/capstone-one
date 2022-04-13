@@ -226,6 +226,10 @@ header {
   background-color: rgb(211, 211, 211, 0.1);
 }
 
+footer > img {
+  max-width: 200px;
+}
+
 .program-item > img {
   display: block;
   margin-left: auto;
@@ -501,6 +505,11 @@ header {
     height: 100%;
   }
 
+  .rights > div {
+    width: auto;
+    margin-left: 5%;
+  }
+
   #nav > div {
     display: flex;
     flex-direction: row;
@@ -547,7 +556,7 @@ header {
     color: black;
     margin: 0% 2%;
   }
-  
+
   .nav-option:focus {
     outline: 2px solid #ec5242;
     border-radius: 2px;
@@ -645,7 +654,7 @@ header {
   #program5 {
     grid-area: program5;
   }
-  
+
   #seewhole {
     text-transform: uppercase;
     text-decoration: underline;
@@ -689,15 +698,6 @@ header {
 
   .rights {
     justify-content: center;
-  }
-
-  .rights > div {
-    width: auto;
-    margin-left: 5%;
-  }
-
-  footer > img {
-    max-width: 200px;
   }
 
   footer > div > br {
