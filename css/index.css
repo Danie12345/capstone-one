@@ -353,6 +353,12 @@ header {
   stroke-width: 2;
 }
 
+.more-icon {
+  width: 8px;
+  position: relative;
+  top: -1px;
+}
+
 .rotate {
   -moz-transition: all 0.4s linear;
   -webkit-transition: all 0.4s linear;

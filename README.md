@@ -11,31 +11,30 @@
 - Bootstrap
 - Github, Github Pages & VS Code
 
-## Live Demo (if available)
+## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo](https://danie12345.github.io/capstone-one/)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+- Install Node.
+- (Optional) Have an IDE with a live server feature.
 
 ### Setup
+- Clone the repository to your local machine.
 
 ### Install
+- Install node modules: npm i -y
 
 ### Usage
-
-### Run tests
+- Open the index.html file, or start a live server.
 
 ### Deployment
-
+- Create a pull request with your changes.
 
 
 ## Authors
@@ -46,15 +45,17 @@ To get a local copy up and running follow these simple example steps.
 - [DanielMalo_v4](https://twitter.com/DanielMalo_v4)
 - [Daniel Malo](https://www.linkedin.com/in/daniel-malo-75218a192/)
 
+## Template Creator
+
+👤 [Cindy Shin](https://www.behance.net/adagio07)
+
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+This project is fully based on Cindy Shin's template for the Creative Commons Global Summit 2015 event website
 
 ## 📝 License
 

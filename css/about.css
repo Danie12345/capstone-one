@@ -62,6 +62,10 @@
   border-bottom: 1px solid rgb(86, 86, 86);
 }
 
+.summit-img:hover {
+  opacity: 0.9;
+}
+
 .active {
   display: block;
 }
@@ -81,6 +85,24 @@
 
   .desktop-visible {
     display: block;
+  }
+
+  #path-icon {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 8%;
+    margin-top: 12px;
+  }
+
+  #path-icon > a {
+    display: flex;
+    align-items: center;
+    min-width: auto;
+  }
+
+  #path-icon > a {
+    color: black;
+    margin: 0% 4px;
   }
 
   #about-event {
@@ -174,7 +196,6 @@
 
   .summit-img {
     max-width: 66%;
-    flex-direction: row;
   }
 
   #about-partners {
