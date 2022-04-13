@@ -46,9 +46,9 @@ moreSpeakers.addEventListener('click', () => {
   moreSpeakersToggle = !moreSpeakersToggle;
 });
 
-Element.prototype.appendAfter = function (element) {
+Element.prototype.appendAfter = (element) => {
   element.parentNode.insertBefore(this, element.nextSibling);
-}, false;
+};
 
 function resizeDesktop() {
   if (window.innerWidth >= 768 && !toggleDesktop) {
