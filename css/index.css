@@ -51,7 +51,6 @@ a:active {
 }
 
 header {
-  height: 15%;
   min-height: 40px;
   flex-grow: 1;
 }
@@ -163,7 +162,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 35px;
+  padding: 40px 0%;
 }
 
 .section.dark > div > h2 {
@@ -447,6 +446,209 @@ header {
 
 @media screen and (min-width: 768px) {
   .mobile-visible {
+    display: none;
+  }
+
+  .desktop-visible {
+    display: unset;
+  }
+
+  main {
+    padding: 0% !important;
+    display: block !important;
+    height: auto !important;
+  }
+
+  header {
+    width: 100%;
+    min-height: auto;
+    display: block;
+  }
+
+  #nav {
+    padding: 0%;
+    height: 100%;
+  }
+
+  #nav > div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-items: flex-end;
+  }
+
+  #top-nav {
+    width: 100%;
+    height: 35px;
+    background-color: rgb(39, 42, 49);
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 8%;
+  }
+
+  #top-nav > * {
+    color: rgb(245, 245, 246);
+    margin: 0% 16px;
+  }
+
+  .current-page {
+    color: #ec5242 !important;
+  }
+
+  #bottom-nav {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(245, 245, 246);
+    box-shadow: 0 2px 6px rgb(0, 0, 0, 0.3);
+    border-radius: 0%;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 8%;
+  }
+
+  #bottom-nav > * {
+    color: black;
+    margin: 0% 2%;
+  }
+  
+  .nav-option:focus {
+    outline: 2px solid #ec5242;
+  } 
+
+  #logo {
+    margin-right: 16vw;
+  }
+
+  #event-intro {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 32px 0%;
+    margin: 60px 0%;
+    margin-left: 10%;
+  }
+
+  .pre-title {
+    font-size: 36px;
+  }
+
+  .title {
+    font-size: 48px;
+    max-width: 90%;
+  }
+
+  .introduction {
+    max-width: 60%;
+    font-size: 12px;
+  }
+
+  #programs-list {
+    display: grid;
+    grid-template-areas: 'program1 program2 program3 program4 program5';
+    column-gap: 6px;
+    row-gap: 6px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+
+  .program-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 150px;
+    height: 180px;
+    padding: 0%;
+    margin: auto;
+  }
+
+  .program-item > img {
+    padding: 0%;
+    margin: 0%;
+    margin-top: 8px;
+    height: 45px;
+    width: auto;
+  }
+
+  .program-item > h3 {
+    width: 90%;
+    height: auto;
+    text-align: center;
+    vertical-align: text-top;
+  }
+
+  .program-item > span {
+    margin: 4px 6px 8px 6px;
+    width: 90%;
+    text-align: center;
+  }
+
+  #program1 {
+    grid-area: program1;
+  }
+
+  #program2 {
+    grid-area: program2;
+  }
+
+  #program3 {
+    grid-area: program3;
+  }
+
+  #program4 {
+    grid-area: program4;
+  }
+
+  #program5 {
+    grid-area: program5;
+  }
+  
+  #seewhole {
+    text-transform: uppercase;
+    text-decoration: underline;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+  }
+
+  #speakers-list {
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 40%);
+    justify-content: center;
+  }
+
+  #sponsors {
+    justify-content: center;
+  }
+
+  #sponsors > li {
+    max-width: 10%;
+    margin: 0% 12px;
+  }
+
+  .sponsor-img {
+    width: 100%;
+  }
+
+  .rights {
+    justify-content: center;
+  }
+
+  .rights > div {
+    width: auto;
+    margin-left: 5%;
+  }
+
+  footer > img {
+    max-width: 200px;
+  }
+
+  footer > div > br {
     display: none;
   }
 }

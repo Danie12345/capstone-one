@@ -10,7 +10,7 @@ let toggleDesktop = false;
 
 function showSpeakers(allowSpeakers) {
   let i = 0;
-  Object.values(speakers).every((speaker) => {
+  speakers.every((speaker) => {
     if (i > allowSpeakers) {
       return false;
     }
@@ -32,7 +32,7 @@ moreSpeakers.addEventListener('click', () => {
     document.querySelector('[class~=rotate]').classList.remove('pi');
     document.querySelector('[class~=rotate]').setAttribute('viewBox', '-6 -6 32 32');
   } else {
-    showSpeakers(Object.keys(speakers).length);
+    showSpeakers(speakers.length);
     document.querySelector('[class~=btn-more]').innerHTML = 'Less';
     document.querySelector('[class~=rotate]').classList.add('pi');
     document.querySelector('[class~=rotate]').setAttribute('viewBox', '-6 -10 32 32');
@@ -42,11 +42,16 @@ moreSpeakers.addEventListener('click', () => {
 
 showSpeakers(1);
 
+Element.prototype.appendAfter = function (element) {
+  element.parentNode.insertBefore(this, element.nextSibling);
+}, false;
+
 function resizeDesktop() {
   if (window.innerWidth >= 768 && !toggleDesktop) {
     partners.appendAfter(document.getElementById('speakers'));
     license.appendAfter(partners);
     toggleDesktop = !toggleDesktop;
+    moreSpeakers.dispatchEvent(new Event('click'));
   } else if (window.innerWidth < 768 && toggleDesktop) {
     document.querySelector('body').removeChild(partners);
     document.querySelector('body').removeChild(license);

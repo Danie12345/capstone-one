@@ -5,32 +5,56 @@ const speaker = (name, titles, works, photo) => {
   return obj;
 };
 
-export const speakers = {
-  Scooby: speaker(
+export const speakers = [
+  speaker(
     'Scooby',
     'Professor at Harvard Detective School',
     'Scoob has solved countless mysteries along his journey with the gang, even capturing a metaphysical ghost once or twice in his time...',
     'assets/images/pattern_bg.png',
   ),
-  'Cardi-O': speaker(
+  speaker(
     'Cardi-O',
     'The only singer that will ever make you feel exhausted',
     'Walk walk walk walk walk walk... or so goes the most epic hit that this great singer has ever made, behold.',
     'assets/images/pattern_bg.png',
   ),
-  'The-Rock': speaker(
+  speaker(
     'Dwayne (The Rock) Johnson',
     'Actor that is moved by nothing',
     'This man, standing at "a lot of feet tall", weighs about two tons, and his weight increases tenfold when he gets inside any vehicle.',
     'assets/images/pattern_bg.png',
   ),
-  'The-Grim-Reaper': speaker(
+  speaker(
     'The Grim Reaper',
     'Comes and goes as he pleases, and as he doesn\'t',
     'The only thing standing between you and the next life, will you be able to convince him to let you live a little longer?',
     'assets/images/pattern_bg.png',
   ),
-};
+  speaker(
+    'Daniel Malo',
+    '',
+    'Has coded every single program you have encountered (and haven\'t) in your entire life, probably.',
+    'assets/images/pattern_bg.png',
+  ),
+  speaker(
+    'Sushi',
+    'Everybody\'s favorite food',
+    'Works everywhere, in everything.',
+    'assets/images/pattern_bg.png',
+  ),
+  speaker(
+    'Empire State Building',
+    'Comes and goes as he pleases, and as he doesn\'t',
+    'The only thing standing between you and the next life, will you be able to convince him to let you live a little longer?',
+    'assets/images/pattern_bg.png',
+  ),
+  speaker(
+    'The Grim Reaper',
+    'Comes and goes as he pleases, and as he doesn\'t',
+    'The only thing standing between you and the next life, will you be able to convince him to let you live a little longer?',
+    'assets/images/pattern_bg.png',
+  ),
+];
 
 export function speakerTemplate(speaker) {
   const speakerLi = document.createElement('li');

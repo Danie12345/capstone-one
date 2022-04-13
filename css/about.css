@@ -83,16 +83,6 @@
     display: block;
   }
 
-  #main {
-    padding: 0%;
-    display: block;
-    height: auto;
-  }
-
-  header {
-    height: 32px;
-  }
-
   #about-event {
     width: 100%;
     display: flex;
@@ -125,7 +115,15 @@
     font-size: 12px;
   }
 
+  #about-logo > br {
+    display: none;
+  }
+
   #contact > span > br {
+    display: none;
+  }
+
+  #about-license > div > br {
     display: none;
   }
 
@@ -147,10 +145,6 @@
 
   #about-logo > img {
     width: 37%;
-  }
-
-  #about-logo > br {
-    display: none;
   }
 
   #about-summits {
@@ -201,9 +195,5 @@
   #about-license > img {
     width: 25vw;
     height: auto;
-  }
-
-  #about-license > div > br {
-    display: none;
   }
 }
