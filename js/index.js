@@ -46,14 +46,10 @@ moreSpeakers.addEventListener('click', () => {
   moreSpeakersToggle = !moreSpeakersToggle;
 });
 
-Element.prototype.appendAfter = (element) => {
-  element.parentNode.insertBefore(this, element.nextSibling);
-};
-
 function resizeDesktop() {
   if (window.innerWidth >= 768 && !toggleDesktop) {
-    partners.appendAfter(document.getElementById('speakers'));
-    license.appendAfter(partners);
+    document.getElementById('speakers').parentNode.insertBefore(partners, document.getElementById('speakers').nextSibling);
+    partners.parentNode.insertBefore(license, partners.nextSibling);
     moreSpeakersToggle = false;
     moreSpeakers.dispatchEvent(new Event('click'));
     toggleDesktop = !toggleDesktop;
