@@ -62,7 +62,7 @@ export function speakerTemplate(speaker) {
   speakerLi.setAttribute('name', speaker.name.replaceAll(' ', '-'));
 
   const img = document.createElement('img');
-  img.setAttribute('src', `/capstone-one/assets/images/${speaker.photo}`);
+  img.setAttribute('src', `capstone-one/assets/images/${speaker.photo}`);
   img.setAttribute('alt', `${speaker.name}'s photo.`);
 
   const div = document.createElement('div');
