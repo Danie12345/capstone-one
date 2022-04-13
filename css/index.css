@@ -327,7 +327,7 @@ footer > img {
 .speaker > div:nth-child(1) {
   min-width: 140px;
   min-height: 140px;
-  background-image: url('/assets/images/grid-background.png');
+  background-image: url('../assets/images/grid-background.png');
   background-size: 48px;
   background-repeat: no-repeat;
   background-position: top left;
