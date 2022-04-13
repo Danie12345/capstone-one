@@ -1,0 +1,216 @@
+/* General styles */
+
+@font-face {
+  font-family: 'COCOGOOSE Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('COCOGOOSE Regular'), url('fonts/cocogoose_trial.woff') format('woff');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+/* Mobile Styles */
+
+#about-event {
+  flex-grow: 20;
+  text-align: center;
+}
+
+.pre-title {
+  background-clip: unset;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, rgb(255, 53, 2), rgb(255, 81, 0));
+  font-family: 'Lato', sans-serif;
+  font-size: larger;
+  font-weight: normal;
+}
+
+.title {
+  background-clip: unset;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to left, rgb(243, 78, 36), rgb(243, 77, 0));
+  font-family: 'COCOGOOSE Regular', sans-serif;
+  font-size: 28px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.introduction {
+  margin-top: 48px;
+  background-color: white;
+  border: 1px solid rgb(201, 201, 201, 0.4);
+  padding: 20px 12px;
+  font-size: 11px;
+  line-height: 22px;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  color: rgb(86, 86, 86);
+}
+
+#contact {
+  margin-top: 32px;
+  font-family: 'Lato', sans-serif;
+  color: rgb(86, 86, 86);
+  font-weight: 600;
+  font-size: 11px;
+}
+
+#contact > a {
+  color: rgb(39, 42, 49);
+  border-bottom: 1px solid rgb(86, 86, 86);
+}
+
+.summit-img:hover {
+  opacity: 0.9;
+}
+
+.active {
+  display: block;
+}
+
+/* Desktops Styles */
+
+@media screen and (min-width: 435px) {
+  #main {
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-visible {
+    display: none;
+  }
+
+  .desktop-visible {
+    display: block;
+  }
+
+  #path-icon {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 8%;
+    margin-top: 12px;
+  }
+
+  #path-icon > a {
+    display: flex;
+    align-items: center;
+    color: black;
+    margin: 0% 4px;
+  }
+
+  #about-event {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 32px 0%;
+  }
+
+  .title {
+    width: 54%;
+    text-align: center;
+    margin: 0%;
+    font-weight: unset;
+    font-size: 48px;
+  }
+
+  #about-event > hr.desktop-visible {
+    margin: 24px 0%;
+  }
+
+  .introduction {
+    font-size: 13px;
+    margin: 12px 0%;
+    max-width: 75%;
+  }
+
+  #contact {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  #about-logo > br {
+    display: none;
+  }
+
+  #contact > span > br {
+    display: none;
+  }
+
+  #about-license > div > br {
+    display: none;
+  }
+
+  #about-logo > div > h2 > br {
+    display: none;
+  }
+
+  #about-logo > div {
+    width: auto;
+  }
+
+  #about-logo > div > span {
+    margin: 0%;
+  }
+
+  #about-logo > div :nth-child(3) {
+    margin-top: 8px;
+  }
+
+  #about-logo > img {
+    width: 37%;
+  }
+
+  #about-summits {
+    display: grid;
+    width: 100%;
+    grid-template-areas: 'top top' 'summit13 summit11' '. .';
+    justify-items: center;
+  }
+
+  #summit-top {
+    grid-area: top;
+    font-size: smaller;
+    width: 100%;
+  }
+
+  #summit13 {
+    grid-area: summit13;
+    justify-self: end;
+    margin-right: 6px;
+  }
+
+  #summit11 {
+    grid-area: summit11;
+    justify-self: start;
+    margin-left: 6px;
+  }
+
+  .summit-img {
+    max-width: 66%;
+  }
+
+  #about-partners {
+    display: none;
+  }
+
+  #about-license {
+    background-color: rgb(39, 42, 49);
+    height: 120px;
+    color: white;
+    margin-bottom: 0%;
+  }
+
+  .rights {
+    justify-content: center;
+  }
+
+  #about-license > img {
+    width: 25vw;
+    height: auto;
+  }
+}
