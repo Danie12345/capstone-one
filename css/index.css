@@ -93,9 +93,20 @@ header {
   }
 }
 
-.nav-options > div {
+.nav-options > ul {
   width: 100%;
   height: 100%;
+}
+
+.nav-options > ul > li {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-options > ul > li > a {
+  width: 100%;
+  height: 100%;
+  justify-self: center;
 }
 
 .mobile-menu {
@@ -148,7 +159,7 @@ header {
   color: transparent;
   background-image: url('../assets/images/title-background.jpg');
   font-family: 'COCOGOOSE Regular', sans-serif;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -224,6 +235,18 @@ header {
   vertical-align: middle;
   align-items: center;
   background-color: rgb(211, 211, 211, 0.1);
+  outline: none;
+  border: 2px solid transparent;
+}
+
+.program-item:hover {
+  border: 2px solid white;
+  border-radius: 2px;
+}
+
+.program-item:focus {
+  border: 2px solid white;
+  border-radius: 2px;
 }
 
 footer > img {
@@ -301,31 +324,49 @@ footer > img {
   margin: 20px 0%;
 }
 
-.speaker > img {
-  width: 100px;
-  height: 100px;
-  align-self: center;
-  margin-right: 8px;
+.speaker > div:nth-child(1) {
+  min-width: 140px;
+  min-height: 140px;
+  background-image: url('/assets/images/grid-background.png');
+  background-size: 48px;
+  background-repeat: no-repeat;
+  background-position: top left;
 }
 
-.speaker > div {
+.section > img {
+  height: auto;
+  width: 85%;
+}
+
+.speaker > div > img {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  top: auto;
+  left: 10px;
+  margin-right: 8px;
+  margin-top: 8px;
+  background-color: white;
+}
+
+.speaker > div:nth-child(2) {
   width: 70%;
   line-height: 90%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   font-weight: 700;
 }
 
 .speaker > div > h3 {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   margin: 0%;
 }
 
 .speaker > div > small {
   color: #ec5242;
-  font-size: 8px;
+  font-size: 11px;
   font-style: italic;
 }
 
@@ -335,7 +376,7 @@ footer > img {
 }
 
 .speaker > div > span {
-  font-size: 8px;
+  font-size: 13px;
 }
 
 #speakers > button {
@@ -399,11 +440,6 @@ footer > img {
   text-align: center;
   margin: 8px 0%;
   align-self: center;
-}
-
-.section > img {
-  height: auto;
-  width: 85%;
 }
 
 .section > .summit-img {
@@ -557,9 +593,25 @@ footer > img {
     margin: 0% 2%;
   }
 
-  .nav-option:focus {
+  .nav-options > ul > li > a {
+    width: 100%;
+    height: 100%;
+    color: black;
+  }
+
+  li.nav-option > a:focus {
     outline: 2px solid #ec5242;
     border-radius: 2px;
+  }
+
+  .nav-options > ul {
+    flex-direction: row;
+    width: 60%;
+  }
+
+  .nav-options > ul > li {
+    width: 100%;
+    height: 100%;
   }
 
   .mobile-menu {

@@ -111,11 +111,11 @@
   }
 
   .title {
-    width: 60%;
+    width: 54%;
     text-align: center;
     margin: 0%;
     font-weight: unset;
-    font-size: xx-large;
+    font-size: 48px;
   }
 
   #about-event > hr.desktop-visible {

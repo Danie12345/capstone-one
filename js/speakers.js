@@ -61,9 +61,11 @@ export function speakerTemplate(speaker) {
   speakerLi.classList.add('speaker');
   speakerLi.setAttribute('name', speaker.name.replaceAll(' ', '-'));
 
+  const imgDiv = document.createElement('div');
   const img = document.createElement('img');
   img.setAttribute('src', `./assets/images/${speaker.photo}`);
   img.setAttribute('alt', `${speaker.name}'s photo.`);
+  imgDiv.appendChild(img);
 
   const div = document.createElement('div');
   const h3 = document.createElement('h3');
@@ -80,7 +82,7 @@ export function speakerTemplate(speaker) {
   div.appendChild(hr);
   div.appendChild(span);
 
-  speakerLi.appendChild(img);
+  speakerLi.appendChild(imgDiv);
   speakerLi.appendChild(div);
   return speakerLi;
 }

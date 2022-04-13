@@ -12,7 +12,7 @@
   </head>
   <body>
     <main id="main" class="container-fullwidth">
-      <header>
+      <div>
         <nav id="nav" class="container-fullwidth navbar">
           <div class="desktop-visible" id="top-nav" >
             <a href="https://facebook.com"><img src="../assets/icons/facebook.png" alt="Facebook logo"></a>
@@ -25,16 +25,16 @@
           <div class="nav-options row-fullwidth mobile-visible" id="bottom-nav">
             <a class="desktop-visible" id="logo" href="../index.html"><img src="../assets/images/logo-clickable.png" alt="Clickable logo"></a>
             <img class="mobile-visible close-menu" src="../assets/icons/close-icon.png" alt="Close menu button.">
-            <div class="mobile-menu">
-              <a class="nav-option current-page" href="../index.html">Home</a>
-              <a class="nav-option" href="../index.html#programs">Program</a>
-              <a class="nav-option mobile-visible" href="../index.html#join-summit">Join</a>
-              <a class="nav-option desktop-visible" href="../index.html#seewhole">Join</a>
-              <a class="nav-option mobile-visible" href="#sponsors">Sponsor</a>
-              <a class="nav-option desktop-visible" href="../index.html#sponsors">Sponsor</a>
-              <a class="nav-option" href="https://creativecommons.org/tag/news/">News</a>
-              <a class="nav-option" href="https://creativecommons.org/campaign/">CC Campaign</a>
-            </div>
+            <ul class="mobile-menu">
+              <li class="nav-option"><a class="current-page" href="../index.html">Home</a></li>
+              <li class="nav-option"><a href="../index.html#programs">Program</a></li>
+              <li class="mobile-visible nav-option"><a href="../index.html#join-summit">Join</a></li>
+              <li class="desktop-visible nav-option"><a href="../index.html#seewhole">Join</a></li>
+              <li class="mobile-visible nav-option"><a href="#sponsors">Sponsor</a></li>
+              <li class="desktop-visible nav-option"><a href="../index.html#sponsors">Sponsor</a></li>
+              <li class="nav-option"><a href="https://creativecommons.org/tag/news/">News</a></li>
+              <li class="nav-option"><a href="https://creativecommons.org/campaign/">CC Campaign</a></li>
+            </ul>
           </div>
         </nav>
         <div id="path-icon" class="desktop-visible">
@@ -46,7 +46,7 @@
           </a>
            > <a href="#">About</a>
         </div>
-      </header>
+      </div>
       <section id="about-event" class="container-fullwidth">
         <span class="pre-title mobile-visible">"Hello! Sharing World"</span>
         <h1 class="title">Creative Commons Global Summit 2015</h1>
