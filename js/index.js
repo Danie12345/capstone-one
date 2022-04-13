@@ -6,10 +6,12 @@ const speakersList = document.querySelector('#speakers-list');
 const moreSpeakers = document.querySelector('#all-speakers');
 let moreSpeakersToggle = false;
 const burger = document.querySelector('#hamburger');
+const closeMenu = document.querySelector('.close-menu');
 let toggleDesktop = false;
 
 function showSpeakers(allowSpeakers) {
   let i = 0;
+  speakersList.innerHTML = '';
   speakers.every((speaker) => {
     if (i > allowSpeakers) {
       return false;
@@ -22,6 +24,12 @@ function showSpeakers(allowSpeakers) {
 
 burger.addEventListener('click', () => {
   document.querySelector('.nav-options').classList.toggle('active');
+  burger.classList.toggle('active');
+});
+
+closeMenu.addEventListener('click', () => {
+  document.querySelector('.nav-options').classList.toggle('active');
+  burger.classList.toggle('active');
 });
 
 moreSpeakers.addEventListener('click', () => {
@@ -40,8 +48,6 @@ moreSpeakers.addEventListener('click', () => {
   moreSpeakersToggle = !moreSpeakersToggle;
 });
 
-showSpeakers(1);
-
 Element.prototype.appendAfter = function (element) {
   element.parentNode.insertBefore(this, element.nextSibling);
 }, false;
@@ -50,8 +56,9 @@ function resizeDesktop() {
   if (window.innerWidth >= 768 && !toggleDesktop) {
     partners.appendAfter(document.getElementById('speakers'));
     license.appendAfter(partners);
-    toggleDesktop = !toggleDesktop;
+    moreSpeakersToggle = false;
     moreSpeakers.dispatchEvent(new Event('click'));
+    toggleDesktop = !toggleDesktop;
   } else if (window.innerWidth < 768 && toggleDesktop) {
     document.querySelector('body').removeChild(partners);
     document.querySelector('body').removeChild(license);
@@ -60,4 +67,5 @@ function resizeDesktop() {
 }
 
 resizeDesktop();
+window.addEventListener('load', window.innerWidth < 768 ? showSpeakers(1) : showSpeakers(speakers.length));
 window.addEventListener('resize', resizeDesktop);

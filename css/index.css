@@ -15,6 +15,7 @@ body {
   height: 100vh;
   margin: 0%;
   padding: 0%;
+  overflow-x: auto;
 }
 
 ul,
@@ -42,6 +43,7 @@ a:active {
   padding: 0% 5vw;
   padding-top: 1vh;
   height: 80%;
+  min-height: 516px;
   display: flex;
   flex-direction: column;
 }
@@ -61,15 +63,12 @@ header {
 }
 
 .nav-options.active {
-  position: relative;
+  position: absolute;
+  top: 50%;
   width: 100%;
-  min-height: 70vh;
+  min-height: 451px;
   background-color: rgba(44, 44, 44);
   backdrop-filter: blur(1px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
   margin-top: 8px;
   animation: fadeIn 0.2s;
 }
@@ -94,14 +93,39 @@ header {
   }
 }
 
+.nav-options > div {
+  width: 100%;
+  height: 100%;
+}
+
+.mobile-menu {
+  height: 420px !important;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.close-menu {
+  max-width: 8px !important;
+  height: auto;
+  position: relative;
+  left: 12px;
+}
+
 .nav-option {
   width: auto;
   height: auto;
+  text-align: center;
 }
 
 #hamburger {
   height: 28px;
   width: 36px;
+}
+
+#hamburger.active {
+  display: none;
 }
 
 #event-intro {
@@ -269,7 +293,7 @@ header {
 .speaker {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   margin: 20px 0%;
 }
 
@@ -277,6 +301,7 @@ header {
   width: 100px;
   height: 100px;
   align-self: center;
+  margin-right: 8px;
 }
 
 .speaker > div {
@@ -501,22 +526,33 @@ header {
     background-color: rgb(245, 245, 246);
     box-shadow: 0 2px 6px rgb(0, 0, 0, 0.3);
     border-radius: 0%;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: center;
-    padding-right: 8%;
   }
 
-  #bottom-nav > * {
+  #bottom-nav > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 56%;
+  }
+
+  #bottom-nav > div > * {
     color: black;
     margin: 0% 2%;
   }
   
   .nav-option:focus {
     outline: 2px solid #ec5242;
-  } 
+    border-radius: 2px;
+  }
 
-  #logo {
-    margin-right: 16vw;
+  .mobile-menu {
+    height: unset !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
   #event-intro {
@@ -618,8 +654,18 @@ header {
   #speakers-list {
     max-width: 80%;
     display: grid;
+    column-gap: 16px;
     grid-template-columns: repeat(auto-fill, 40%);
     justify-content: center;
+  }
+
+  .speaker > img {
+    margin-right: 8px;
+  }
+
+  .speaker > h3 {
+    width: auto;
+    height: auto;
   }
 
   #sponsors {

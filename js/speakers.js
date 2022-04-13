@@ -44,14 +44,14 @@ export const speakers = [
   ),
   speaker(
     'Empire State Building',
-    'Comes and goes as he pleases, and as he doesn\'t',
-    'The only thing standing between you and the next life, will you be able to convince him to let you live a little longer?',
+    'The fattest building ever built',
+    'Word says that the workers that built this giant were having lunch at a steel bar that poked outward, 120 m above street level.',
     'assets/images/pattern_bg.png',
   ),
   speaker(
-    'The Grim Reaper',
-    'Comes and goes as he pleases, and as he doesn\'t',
-    'The only thing standing between you and the next life, will you be able to convince him to let you live a little longer?',
+    'Evil Twin of The Grim Reaper',
+    'He likes to make fun of his twin brother',
+    'He\'s going to, ok?',
     'assets/images/pattern_bg.png',
   ),
 ];
@@ -68,6 +68,7 @@ export function speakerTemplate(speaker) {
   const div = document.createElement('div');
   const h3 = document.createElement('h3');
   h3.innerHTML = speaker.name;
+  h3.setAttribute('tabindex', '0');
   const small = document.createElement('small');
   small.innerHTML = speaker.titles;
   const hr = document.createElement('hr');
