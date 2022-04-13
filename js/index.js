@@ -1,13 +1,18 @@
+import partners from './partners.js';
+import license from './license.js';
 import { speakers, speakerTemplate } from './speakers.js';
 
 const speakersList = document.querySelector('#speakers-list');
 const moreSpeakers = document.querySelector('#all-speakers');
 let moreSpeakersToggle = false;
 const burger = document.querySelector('#hamburger');
+const closeMenu = document.querySelector('.close-menu');
+let toggleDesktop = false;
 
 function showSpeakers(allowSpeakers) {
   let i = 0;
-  Object.values(speakers).every((speaker) => {
+  speakersList.innerHTML = '';
+  speakers.every((speaker) => {
     if (i > allowSpeakers) {
       return false;
     }
@@ -19,6 +24,12 @@ function showSpeakers(allowSpeakers) {
 
 burger.addEventListener('click', () => {
   document.querySelector('.nav-options').classList.toggle('active');
+  burger.classList.toggle('active');
+});
+
+closeMenu.addEventListener('click', () => {
+  document.querySelector('.nav-options').classList.toggle('active');
+  burger.classList.toggle('active');
 });
 
 moreSpeakers.addEventListener('click', () => {
@@ -27,14 +38,32 @@ moreSpeakers.addEventListener('click', () => {
     showSpeakers(1);
     document.querySelector('[class~=btn-more]').innerHTML = 'More';
     document.querySelector('[class~=rotate]').classList.remove('pi');
-    document.querySelector('[class~=rotate]').setAttribute('viewBox', '-6 -6 32 32');
   } else {
-    showSpeakers(Object.keys(speakers).length);
+    showSpeakers(speakers.length);
     document.querySelector('[class~=btn-more]').innerHTML = 'Less';
     document.querySelector('[class~=rotate]').classList.add('pi');
-    document.querySelector('[class~=rotate]').setAttribute('viewBox', '-6 -10 32 32');
   }
   moreSpeakersToggle = !moreSpeakersToggle;
 });
 
-showSpeakers(1);
+Element.prototype.appendAfter = (element) => {
+  element.parentNode.insertBefore(this, element.nextSibling);
+};
+
+function resizeDesktop() {
+  if (window.innerWidth >= 768 && !toggleDesktop) {
+    partners.appendAfter(document.getElementById('speakers'));
+    license.appendAfter(partners);
+    moreSpeakersToggle = false;
+    moreSpeakers.dispatchEvent(new Event('click'));
+    toggleDesktop = !toggleDesktop;
+  } else if (window.innerWidth < 768 && toggleDesktop) {
+    document.querySelector('body').removeChild(partners);
+    document.querySelector('body').removeChild(license);
+    toggleDesktop = !toggleDesktop;
+  }
+}
+
+resizeDesktop();
+window.addEventListener('load', window.innerWidth < 768 ? showSpeakers(1) : showSpeakers(speakers.length));
+window.addEventListener('resize', resizeDesktop);

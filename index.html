@@ -13,21 +13,26 @@
     <main id="main" class="container-fullwidth">
       <header>
         <nav id="nav" class="container-fullwidth navbar">
-          <div class="desktop-visible">
-            <img src="#" alt="Facebook logo">
-            <img src="#" alt="Twitter logo">
-            <button type="button">Logout</button>
-            <button type="button">Mypage</button>
-            <button type="button">English</button>
+          <div class="desktop-visible" id="top-nav" >
+            <a href="https://facebook.com"><img src="/assets/icons/facebook.png" alt="Facebook logo"></a>
+            <a href="https://twitter.com"><img src="/assets/icons/twitter.png" alt="Twitter logo"></a>
+            <a href="#">Logout</a>
+            <a href="#">Mypage</a>
+            <a href="#">English</a>
           </div>
           <img src="assets/icons/mobile-menu.png" alt="Menu hamburger button" id="hamburger" class="nav-item mobile-visible">
-          <div class="nav-options row-fullwidth mobile-visible">
-            <a class="nav-option" href="#">About</a>
-            <a class="nav-option" href="#">Program</a>
-            <a class="nav-option" href="#">Join</a>
-            <a class="nav-option" href="#">Sponsor</a>
-            <a class="nav-option" href="#">News</a>
-            <a class="nav-option" href="#">CC Campaign</a>
+          <div class="nav-options row-fullwidth mobile-visible" id="bottom-nav">
+            <a class="desktop-visible" id="logo" href="index.html"><img src="assets/images/logo-clickable.png" alt="Clickable logo"></a>
+            <img class="mobile-visible close-menu" src="assets/icons/close-icon.png" alt="Close menu button.">
+            <div class="mobile-menu">
+              <a class="nav-option current-page" href="/html/about.html">About</a>
+              <a class="nav-option" href="#programs">Program</a>
+              <a class="nav-option mobile-visible" href="#join-summit">Join</a>
+              <a class="nav-option desktop-visible" href="#seewhole">Join</a>
+              <a class="nav-option" href="#sponsors">Sponsor</a>
+              <a class="nav-option" href="https://creativecommons.org/tag/news/">News</a>
+              <a class="nav-option" href="https://creativecommons.org/campaign/">CC Campaign</a>
+            </div>
           </div>
         </nav>
       </header>
@@ -51,7 +56,7 @@
       <h2>Main Program</h2>
       <hr class="hr">
       <ul id="programs-list">
-        <li class="program-item">
+        <li id="program1" class="program-item" tabindex="0">
           <img src="assets/icons/program1.png" alt="Lecture Icon">
           <h3>Lecture</h3>
           <span>
@@ -59,7 +64,7 @@
             the messages of sharing and opening.
           </span>
         </li>
-        <li class="program-item">
+        <li id="program2" class="program-item" tabindex="0">
           <img src="assets/icons/program2.png" alt="CC Exhibition Icon">
           <h3>CC Exhibition</h3>
           <span>
@@ -67,7 +72,7 @@
             artists, organized from Art Center Nabi.
           </span>
         </li>
-        <li class="program-item">
+        <li id="program3" class="program-item" tabindex="0">
           <img src="assets/icons/program3.png" alt="Forum Icon">
           <h3>Forum</h3>
           <span>
@@ -75,7 +80,7 @@
             experts for each topic.
           </span>
         </li>
-        <li class="program-item">
+        <li id="program4" class="program-item" tabindex="0">
           <img src="assets/icons/program4.png" alt="Workshop Icon">
           <h3>Workshop</h3>
           <span>
@@ -83,7 +88,7 @@
             rather than just watching.
           </span>
         </li>
-        <li class="program-item">
+        <li id="program5" class="program-item" tabindex="0">
           <img src="assets/icons/program5.png" alt="CC Ignite Icon">
           <h3>CC Ignite</h3>
           <span>
@@ -92,17 +97,16 @@
           </span>
         </li>
       </ul>
-      <button id="join-summit" type="button">Join CC Global Summit 2015</button>
+      <button id="join-summit" class="mobile-visible" type="button">Join CC Global Summit 2015</button>
+      <button id="seewhole" class="desktop-visible">See The Whole Program</button>
     </section>
     <section id="speakers">
       <h2>Featured Speakers</h2>
       <hr class="hr">
       <ul id="speakers-list"></ul>
-      <button id="all-speakers" type="button" onclick="javascript:void(0)">
+      <button id="all-speakers" type="button" onclick="javascript:void(0)" class="mobile-visible">
         <span class="btn-more">More</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down rotate" viewBox="-6 -6 32 32">
-          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-        </svg>
+        <img class="more-icon rotate" src="/assets/icons/arrow_down.png" alt="Arrow icon.">
       </button>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
